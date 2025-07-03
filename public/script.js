@@ -15,4 +15,4 @@ function createLessonCard(title,description,link) {
     document.getElementById("lesson-container").appendChild(clone)
 }
 
-createLessonCard("First Lesson", "Intro to HTML", "lessons/lesson-one.html")
+createLessonCard("Challenge", "First component created", "lessons/challenge-one.html")
