@@ -14,18 +14,40 @@ body {
     gap: 12px;
 }
 
-#title, 
-#description {
-    line-height: 1.5;
+
+
+.lesson-card {
+    background-color: #FFFFFF;
+    padding: 16px 32px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lesson-card:hover {
+    border: 2px solid #9a9a9a;
+}
+
+#lesson-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.Lesson-card-title {
+    font-family: Oxygen, Helvetica, sans-serif;
+    font-size: 16px;
     margin: 0;
-    font-family: 'Oxygen', 'Arial', 'sans-serif';
+    font-weight: 600;
     color: #3d3d3d;
 }
 
-#title {
-    font-size: 30px;
+.Lesson-card-description {
+    font-family: Oxygen, Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    font-weight: 300;
+    color: #989898;
 }
 
-#description {
-    font-size: 18px;
-}
