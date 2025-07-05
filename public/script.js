@@ -15,4 +15,5 @@ function createLessonCard(title,description,link) {
     document.getElementById("lesson-container").appendChild(clone)
 }
 
-createLessonCard("Challenge", "First component created", "lessons/challenge-one.html")
+createLessonCard("Challenge", "First component created", "challenges/1/challenge-one.html")
+createLessonCard("Lesson", "Objects", "lessons/array/index.html")
