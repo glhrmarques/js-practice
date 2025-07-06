@@ -1,0 +1,16 @@
+
+.wapprer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#square {
+    width: 200px;
+    height: 200px;
+    background-color: #3d3d3d;
+}
+
+#title {
+    margin: 0px;
+}
