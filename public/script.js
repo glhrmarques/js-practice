@@ -18,3 +18,4 @@ function createLessonCard(title,description,link) {
 createLessonCard("Challenge", "First component created", "challenges/1/challenge-one.html")
 createLessonCard("Lesson", "Objects", "lessons/array/index.html")
 createLessonCard("Lesson", "Events", "lessons/events/index.html")
+createLessonCard("Lesson", "If and else", "lessons/ifelse/index.html")
