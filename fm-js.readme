@@ -2,7 +2,7 @@
 .createElement(); = 
 .setAttribute("name","value");
 .removeAttribute("name);
-
+.split() 
 
 LOOPS
 for (let count = 0; count < 10; count += 1 ) {
@@ -13,8 +13,13 @@ for (count of counter) {
 
 }
 
+for (something in moreStuff) {
+
+}
 
 Maps, filter and spread
+
 .map()
 .filter()
 ...arrayName
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://anjana.dev/javascript-first-steps/2-jsquiz-starter.html -->
+<html lang="en-US">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Quiz.js</title>
+    </head>
+    <body>
+
+        <p id="firstP"></p>
+        <p id="secondP"></p>
+        <p id="thirdP"></p>
+        <p id="fourP"></p>
+
+
+        <script type="text/javascript">
+
+            const firstP = document.querySelector("#firstP");
+            const secondP = document.querySelector("#secondP");
+            const thirdP = document.querySelector("#thirdP");
+            const fourP = document.querySelector("#fourP");
+
+
+            const [name, age, color] = ["Guilherme", 21, "green"];
+            firstP.textContent = name
+
+
+            const places = [
+                {region: "leste", street: "rua dos secadouros"},
+                {region: "centro", street: "avenida paulista"}
+            ];
+
+            const {region, street} = places[0];
+            secondP.textContent = region;
+
+            //const [exampleOne  ,,exampleThree] = ["Example 1", "Example 2", "Example 3"];
+            const [exampleOne,  ...exampleThree] = ["Example 1", "Example 2", "Example 3"];
+            thirdP.textContent = exampleThree
+
+
+            //https://images.dog.ceo/breeds/poodle-standard/n02113799_2280.jpg
+            const originalUrl = "https://images.dog.ceo/breeds/poodle-standard/n02113799_2280.jpg";
+            const splitUrl = originalUrl.split("/");
+            fourP.textContent = splitUrl[4]
+            
+
+        </script>
+
+    </body>
+</html>
