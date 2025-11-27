@@ -1,0 +1,20 @@
+.appenedChild(); = 
+.createElement(); = 
+.setAttribute("name","value");
+.removeAttribute("name);
+
+
+LOOPS
+for (let count = 0; count < 10; count += 1 ) {
+    ....
+}
+
+for (count of counter) {
+
+}
+
+
+Maps, filter and spread
+.map()
+.filter()
+...arrayName

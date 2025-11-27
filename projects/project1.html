@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://anjana.dev/javascript-first-steps/2-jsquiz-starter.html -->
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Project 1</title>
+        <style>
+    </style>
+  </head>
+  <body>
+    <input id="input" placeholder="Your text here"> </input>
+    <button id="submitButton">Submit</button>
+    <div id="contentWrapper"></div>
+  </body>
+  
+
+  <script type="text/javascript">
+
+    const input = document.querySelector("#input");
+    const submitButton = document.querySelector("#submitButton");
+    const wrapper = document.querySelector("#contentWrapper");    
+
+    submitButton.addEventListener("click", () => {
+        if(input.value.length === 0) {
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = "No value"
+            wrapper.appendChild(newParagraph)
+        } else { 
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = input.value;
+            wrapper.appendChild(newParagraph);
+            input.value = "";
+        }
+    })
+
+  </script>
+
+</body></html>

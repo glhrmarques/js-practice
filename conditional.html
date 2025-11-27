@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://anjana.dev/javascript-first-steps/2-jsquiz-starter.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Conditional</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <h1 id="answer"></h1>
+  </body>
+  
+
+  <script type="text/javascript">
+    
+    const answer = document.querySelector("#answer");
+
+    //if (5 > 4) {
+    //  answer.textContent = "Is greater";
+    //} else {
+    //  answer.textContent = "less than";
+    //}
+
+    //function compare(x,y) {
+    //  if (x > y){
+    //    answer.textContent = "is greater";
+    //  } else if (x < y) {
+    //    answer.textContent = "is less";
+    //  } else {
+    //    answer.textContent = "is equal";
+    //  }
+    //}
+    //compare(2,2);
+
+    //function name(firstName, lastName) {
+    //  if(firstName.length >  lastName.length) {
+    //    answer.textContent = "Your first name " + firstName + " is longer than the last";
+    //  } else {
+    //    answer.textContent = "Your last name " + lastName + " is longer than the first";
+    //  }
+    //}
+    //name("Guilherme","Marques")
+
+    
+    //const emptyArray = [];
+    //function isEmpty(array) {
+    //  if ( array.length === 0) {
+    //    answer.textContent = "the array is empty"
+    //  } else {
+    //  }
+    //}
+    //isEmpty(emptyArray);
+
+    const myArrary = [];
+    function validateArray(array) {
+      if(array.length === 0) {
+        answer.textContent = "True";
+      } else {
+        answer.textContent = "False";
+      }
+    }
+
+    validateArray(myArrary)
+
+
+  </script>
+
+</body></html>

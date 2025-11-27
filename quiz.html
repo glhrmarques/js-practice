@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://anjana.dev/javascript-first-steps/2-jsquiz-starter.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Quiz.js</title>
+    <style>
+        body {
+            margin: 1rem auto;
+            padding: 3rem;
+            font-family: sans-serif;
+        }
+        header {
+            width: 50%;
+            margin: 1em auto;
+        }
+        main {
+            min-width: 25rem;
+            max-width: 50%;
+            margin: 0px auto;
+            display:flex; 
+            flex-direction: column;
+        }
+        #statement {
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            box-shadow: 5px 5px 5px gray;
+            padding: 1rem;
+            font-size: x-large;
+            text-align: center;
+            margin: 1rem 0px;
+            min-height: 2em;
+        }
+        #explanation {
+            padding: 1rem;
+            text-align: center;
+        }
+        #options {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            padding: 0.5rem;
+            font-size: medium;
+            border-radius: 5px;
+        }
+        .correct {
+            background-color: lightgreen;
+        }
+        .incorrect {
+            background-color: lightpink;
+        }
+        .next-question {
+            display: none;
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+    <h1>Quiz.js</h1>
+    <p>Do you know JS? Find out!</p>
+    </header>
+
+    <main>
+    <div id="statement">
+        
+    </div>
+
+    <div id="options">
+        <button name="true" value="true">true</button>
+        <button name="false" value="false">false</button>
+    </div>
+
+    <div id="explanation">
+    </div>
+    <button id="next-question" class="next-question">Next question</button>
+
+
+    </main>
+
+  <script type="text/javascript">
+
+    const question1 = { 
+        statement: "Brazil is located in south america.",
+        answer: true,
+        explanation: "Yes, Brazil is located in south america.",
+    }
+
+    const question2 = { 
+        statement: "Poke is a chinese food.",
+        answer: false,
+        explanation: "No, it is from hawai.",
+    }
+
+
+    const statement = document.querySelector("#statement");
+    const options = document.querySelector("#options").children;
+    const briefExplanation = document.querySelector("#explanation");
+    const nextButton = document.querySelector("#next-question");
+
+    statement.textContent = question1.statement;
+
+    function disable(button) {
+        button.setAttribute("disabled","");
+    }
+
+    function enable(button) {
+        button.removeAttribute("disabled");
+    }
+
+    function isCorrect(guess) {
+        return guess === question1.answer.toString();
+    }
+
+
+    for (let buttons of options) {
+        buttons.addEventListener("click", event => {
+            briefExplanation.textContent = question1.explanation;
+            nextButton.style.display = "block";
+            briefExplanation.style.display = "block";
+
+            for(let disableButtons of options) {
+                disable(disableButtons)
+            }
+            
+            const buttonValue = event.target.value;
+
+            if(isCorrect(buttonValue)) {
+                event.target.classList.add("correct");
+            } else {
+                event.target.classList.add("incorrect");
+            }
+
+        });
+    };
+
+    function nextQuestion(next) {
+        next.addEventListener("click", event => {
+            next.style.display = "none";
+            statement.textContent = question2.statement;
+            briefExplanation.textContent = question2.explanation;
+            briefExplanation.style.display = "none";
+
+            for (let enableButtons of options) {
+                enable(enableButtons);
+                enableButtons.classList.remove("correct", "incorrect");
+                
+            }
+        }, {once: true});
+    };
+
+    nextQuestion(nextButton)
+
+
+  </script>
+
+</body></html>

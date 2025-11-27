@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://anjana.dev/javascript-first-steps/2-jsquiz-starter.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Map, Filter and Spread</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <p id="dogsQuantity"></p>
+    <p id="dogsNames"></p>
+    <p id="dogsColors"></p>
+    <p id="dogsWhite"></p>
+  </body>
+
+  <script type="text/javascript">
+
+    const dogsQuantity = document.querySelector("#dogsQuantity");
+    const dogsNames = document.querySelector("#dogsNames");
+    const dogsColors = document.querySelector("#dogsColors");
+    const dogsWhite = document.querySelector("#dogsWhite");
+
+    const dogs = [
+        {name: "Maggie", color:"Light yellow"},
+        {name: "Neguinha", color:"Black"},
+        {name: "Ragnar", color:"White"},
+        {name: "Quiara", color:"White and black"},
+    ]
+
+    const bolivianDogs = [
+        {name: "Moana", color:"Light yellow"},
+        {name: "Tiringa", color:"Brown and white"},
+        {name: "Choco", color:"Brown"},
+    ]
+    
+    const allDogs = [...dogs, ...bolivianDogs];
+
+    const names = dogs.map(allNames => allNames.name);
+    const colors = dogs.filter(allColors => allColors.color.toLowerCase().includes("black"));
+    const white = allDogs.filter(findWhite => findWhite.color.toLowerCase().includes("white"));
+
+
+    dogsQuantity.textContent = `The amount of dogs are ${dogs.length}`
+    dogsNames.textContent = names.join(", ");
+    dogsColors.textContent = colors.map(dog => dog.name).join(", ");
+    dogsWhite.textContent = white.map(dog => dog.name).join(", ")
+    
+    
+  </script>
+
+</body></html>
