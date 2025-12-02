@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://anjana.dev/javascript-first-steps/2-jsquiz-starter.html -->
+<html lang="en-US">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Quiz.js</title>
+    </head>
+    <body>
+
+        <div id="content">
+
+        </div>
+
+
+        <script type="module">            
+            
+            async function fetchUrl(url){
+                const response = await fetch(url);
+                const body = await response.json();
+                const {message} = body
+                return message
+            }
+
+            const arrayDogs = await fetchUrl("https://dog.ceo/api/breed/hound/list");
+
+            for (let item of arrayDogs) {
+                const newText = document.createElement("p");
+                newText.textContent = item;
+                content.appendChild(newText);
+            }
+
+
+
+
+
+        </script>
+
+    </body>
+</html>
